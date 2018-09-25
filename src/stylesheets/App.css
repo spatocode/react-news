@@ -1,7 +1,7 @@
 /**MENU**/
 nav{
   height: 100%;
-  width: 20px;
+  transition: 0.4s;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -21,13 +21,11 @@ nav li{
 }
 nav ul a{
   text-decoration: none;
+  display: flex;
 }
 .icon{
   padding-right: 20px;
   font-size: 20px;
-}
-.name{
-  display: none;
 }
 .title{
   text-align: center;

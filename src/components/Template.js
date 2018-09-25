@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import Menu from './Menu'
+import { Menu } from '../containers'
 import Footer from './Footer'
 
 const Template = ({children}) =>
