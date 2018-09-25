@@ -1,8 +1,11 @@
 import React from 'react'
+import DocumentTitle from 'react-document-title'
 
 const Not_Found = () =>
-    <div>
+    <DocumentTitle title="Page not found">
+        <div>
 
-    </div>
+        </div>
+    </DocumentTitle>
 
 export default Not_Found

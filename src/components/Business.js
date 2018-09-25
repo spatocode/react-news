@@ -1,8 +1,11 @@
 import React from 'react'
+import DocumentTitle from 'react-document-title'
 
 const Business = () =>
-    <div>
+    <DocumentTitle title="React News | Business">
+        <div>
 
-    </div>
+        </div>
+    </DocumentTitle>
 
 export default Business

@@ -1,8 +1,11 @@
 import React from 'react'
+import DocumentTitle from 'react-document-title'
 
 const Technology = () =>
-    <div>
+    <DocumentTitle title="React News | Technology">
+        <div>
 
-    </div>
+        </div>
+    </DocumentTitle>
 
 export default Technology
