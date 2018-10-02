@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
-const Menu = ({show, hide, fullMenu, showMenu}) => {
+const Menu = ({show, hide, fullMenu}) => {
     return(
     <div className="menu" onMouseOver={show} onMouseOut={hide}>
         <nav style={ fullMenu }>
@@ -31,7 +31,4 @@ const Menu = ({show, hide, fullMenu, showMenu}) => {
     )
 }
 
-Menu.propTypes = {
-    action: PropTypes.func.isRequired
-}
 export default Menu

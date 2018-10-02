@@ -4,7 +4,7 @@ import { Menu } from '../containers'
 import Footer from './Footer'
 
 const Template = ({children}) =>
-    <div class="news">
+    <div className="news">
         <Title/>
         <Menu/>
         {children}

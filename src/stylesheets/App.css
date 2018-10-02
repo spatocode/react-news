@@ -17,7 +17,11 @@ nav ul{
 }
 nav li{
   display: block;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
+  padding: 5px;
+}
+nav li:hover{
+  background-color: rgb(187, 187, 187);
 }
 nav ul a{
   text-decoration: none;
