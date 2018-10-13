@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import DisplayMenu from '../components/menu'
-import DisplayHome from '../components/home'
+import DisplayMenu from './UI/menu'
+import DisplayHome from './UI/home'
 import { onOver, onOut } from '../actions'
 
 export const Menu = connect(

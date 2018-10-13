@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HomePage, TechPage, PoliticsPage, SciPage, BusinessPage, SportsPage, NotFoundPage } from './components/Pages'
+import { HomePage, TechPage, PoliticsPage, SciPage, BusinessPage, SportsPage, NotFoundPage } from './components/UI/Pages'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import DocumentTitle from 'react-document-title'
 import './stylesheets/App.css';
