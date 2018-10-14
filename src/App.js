@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import { HomePage, TechPage, PoliticsPage, SciPage, BusinessPage, SportsPage, NotFoundPage } from './components/UI/Pages'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import DocumentTitle from 'react-document-title'
+import { connect } from 'react-redux'
+import { fetchNewsIfNeeded } from './actions'
 import './stylesheets/App.css';
 
 class App extends Component {
+  constructor(){
+    super()
+  }
+
+  componentDidMount(){
+    const { dispatch } = this.props
+    dispatch(fetchNewsIfNeeded())
+  }
+
   render() {
     return (
       <div className="App">
-        <DocumentTitle title="React News | Home">
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={HomePage}/>
@@ -20,10 +29,13 @@ class App extends Component {
               <Route component={NotFoundPage}/>
             </Switch>
           </BrowserRouter>
-        </DocumentTitle>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  news: state.news.items
+})
+
+export default connect(mapStateToProps)(App)

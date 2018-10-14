@@ -5,7 +5,7 @@ import { onOver, onOut } from '../actions'
 
 export const Menu = connect(
     state => ({
-        fullMenu: state.nav.fullNav ? {width: '130px'} : {width: '20px'}
+        fullMenu: state.navReducer.fullNav ? {width: '130px'} : {width: '20px'}
     }), 
     dispatch => ({
         show: () => { dispatch(onOver()) },
@@ -15,9 +15,7 @@ export const Menu = connect(
 
 export const Home = connect(
     state => ({
-        
+        news: state.news.items
     }), 
-    dispatch => ({
-        
-    })
+    null
 )(DisplayHome)

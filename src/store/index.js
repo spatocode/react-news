@@ -1,15 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import navReducer from '../reducers'
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import { navReducer, news } from '../reducers'
 
-export const logger = store => next => action => {
-    let result
-    console.groupCollapsed('dispatching', action.type)
-    console.log('prev state', store.getState())
-    console.log('action', action)
-    result = next(action)
-    console.log('next state', store.getState())
-    console.groupEnd()
-} 
+const logger = createLogger()
 
 export const saver = store => next => action => {
     let result = next(action)
@@ -17,13 +11,14 @@ export const saver = store => next => action => {
     return result
 }
 
-const storeFactory = () =>
-    applyMiddleware(logger, saver) (createStore) (
-        combineReducers({ nav: navReducer }),
-        (localStorage['redux-store']) ?
-            JSON.parse(localStorage['redux-store']) :
-            {}
-        
+const storeFactory = (preloadedState) =>
+    createStore(
+        combineReducers({navReducer, news}),
+        preloadedState,
+        applyMiddleware(
+            thunkMiddleware,
+            logger
+        )
     )
 
 export default storeFactory
