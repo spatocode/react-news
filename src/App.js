@@ -38,7 +38,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  category: state.selectNews.category
+  category: state.selectNews.category,
+  error: state.news.error
 })
 
 export default connect(mapStateToProps)(App)

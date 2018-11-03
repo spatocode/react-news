@@ -24,12 +24,19 @@ export const receiveNews = (json) => ({
     news: json.articles
 })
 
+export const errorReport = () => ({
+    type: C.ERROR_REPORT
+})
+
 function fetchNews(category){
     return dispatch => {
         dispatch(requestNews())
         return fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=8fadfc68622547b88f834eb6e89f6324`)
             .then(response => response.json())
             .then(json => dispatch(receiveNews(json)))
+            .catch(error => {
+                dispatch(errorReport())
+            })
     }
 }
 

@@ -3,7 +3,7 @@ import C from '../actions/constant'
 
 const initialState = {
     isFetching: false,
-    didInvalidate: false,
+    error: false,
     items: []
 }
 
@@ -38,7 +38,13 @@ export function news(state = initialState, action) {
         case C.RECEIVE_NEWS:
             return Object.assign({}, state, {
                 isFetching: false,
+                error: false,
                 items: action.news
+            })
+        case C.ERROR_REPORT: 
+            return Object.assign({}, state, {
+                isFetching: false,
+                error: true
             })
         default:
             return state
