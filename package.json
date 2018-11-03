@@ -2,7 +2,10 @@
   "name": "react-news",
   "version": "0.1.0",
   "private": true,
+  "author": "Ekene Izukanne",
+  "homepage": "https://spatocode.github.io/react-news",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-document-title": "^2.0.3",
@@ -17,6 +20,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

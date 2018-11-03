@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HomePage, TechPage, PoliticsPage, SciPage, BusinessPage, SportsPage, NotFoundPage } from './components/UI/Pages'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchNewsIfNeeded } from './actions'
 import './stylesheets/App.css';
@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <BrowserRouter>
+          <HashRouter>
             <Switch>
               <Route exact path="/" component={HomePage}/>
               <Route path="/technology" component={TechPage}/>
@@ -31,7 +31,7 @@ class App extends Component {
               <Route path="/business" component={BusinessPage}/>
               <Route component={NotFoundPage}/>
             </Switch>
-          </BrowserRouter>
+          </HashRouter>
       </div>
     );
   }
