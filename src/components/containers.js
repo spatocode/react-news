@@ -6,6 +6,7 @@ import Science_UI from './UI/Science'
 import Politics_UI from './UI/Politics'
 import Business_UI from './UI/Business'
 import Sports_UI from './UI/Sports'
+import Title_UI from './UI/Title'
 import { onOver, onOut, selectNews } from '../actions'
 
 export const Menu = connect(
@@ -71,3 +72,10 @@ export const Sports = connect(
         sportsNews: (category) => dispatch(selectNews(category))
     })
 )(Sports_UI)
+
+export const Title = connect(
+    state => ({
+        isFetching: state.news.isFetching
+    }), 
+    null
+)(Title_UI)
