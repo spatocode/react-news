@@ -5,6 +5,7 @@
   "author": "Ekene Izukanne",
   "homepage": "https://spatocode.github.io/react-news",
   "dependencies": {
+    "core-js": "^2.5.7",
     "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
