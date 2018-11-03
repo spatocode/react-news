@@ -38,6 +38,41 @@ nav ul a{
   color: rgb(247, 230, 238);
   padding: 1px;
 }
+.spin-loader{
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 3px solid aliceblue;
+  border-top-color: rgb(30, 156, 240);
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  margin: 15px 20px 0px 0px;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin{
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+.linear-loader{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 3px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  animation: slidein 4s linear infinite;
+}
+@keyframes slidein{
+  from{
+    margin-right: 100%;
+    width: 300%;
+  }
+  to{
+    margin-right: 0%;
+    width: 100%;
+  }
+}
 .main{
   margin: 70px 16% 70px 22%
 }
@@ -60,5 +95,3 @@ nav ul a{
   background-color: rgb(95, 95, 243);
   color: rgb(245, 239, 228);
 }
-
-/**HOME**/
