@@ -1,11 +1,6 @@
 import React from 'react'
-import { Home } from '../containers'
 import Template from './Template'
-import Business from './Business'
-import Sports from './Sports'
-import Science from './Science'
-import Politics from './Politics'
-import Technology from './Technology'
+import { Home, Science, Politics, Technology, Sports, Business } from '../containers'
 import Whoops from './404'
 
 export const HomePage = () =>
