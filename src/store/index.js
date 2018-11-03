@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
-import { navReducer, news } from '../reducers'
+import { navReducer, news, selectNews } from '../reducers'
 
 const logger = createLogger()
 
@@ -13,7 +13,7 @@ export const saver = store => next => action => {
 
 const storeFactory = (preloadedState) =>
     createStore(
-        combineReducers({navReducer, news}),
+        combineReducers({navReducer, news, selectNews}),
         preloadedState,
         applyMiddleware(
             thunkMiddleware,
