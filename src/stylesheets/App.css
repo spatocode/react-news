@@ -7,7 +7,7 @@ nav{
   top: 0;
   left: 0;
   overflow-x: hidden;
-  background-color: rgb(235, 201, 217);
+  background-color: rgb(189, 225, 250);
   padding: 15px;
   padding-top: 20px;
 }
@@ -26,6 +26,7 @@ nav li:hover{
 nav ul a{
   text-decoration: none;
   display: flex;
+  color: rgb(160, 6, 96)
 }
 .icon{
   padding-right: 20px;
@@ -33,9 +34,31 @@ nav ul a{
 }
 .title{
   text-align: center;
-  background-color: rgb(182, 115, 145);
+  background-color: rgb(30, 156, 240);
   color: rgb(247, 230, 238);
   padding: 1px;
+}
+.main{
+  margin: 70px 16% 70px 22%
+}
+.item-image{
+  float: left;
+}
+.item{
+  padding-bottom: 50px;
+}
+.item-head, .item-desc{
+  color: rgb(54, 54, 54);
+}
+.item a{
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(95, 95, 243);
+  font-weight: bold;
+}
+.item a:hover{
+  background-color: rgb(95, 95, 243);
+  color: rgb(245, 239, 228);
 }
 
 /**HOME**/
