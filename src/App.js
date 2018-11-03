@@ -6,13 +6,16 @@ import { fetchNewsIfNeeded } from './actions'
 import './stylesheets/App.css';
 
 class App extends Component {
-  constructor(){
-    super()
+  componentDidMount(){
+    const { dispatch, category } = this.props
+    dispatch(fetchNewsIfNeeded(category))
   }
 
-  componentDidMount(){
+  componentDidUpdate(prevProps){
     const { dispatch } = this.props
-    dispatch(fetchNewsIfNeeded())
+    if(this.props.category !== prevProps.category){
+      dispatch(fetchNewsIfNeeded(this.props.category))
+    }
   }
 
   render() {
@@ -35,7 +38,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  news: state.news.items
+  category: state.selectNews.category
 })
 
 export default connect(mapStateToProps)(App)
