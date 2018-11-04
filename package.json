@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Ekene Izukanne",
-  "homepage": "https://spatocode.github.io/react-news",
+  "homepage": "https://spatocode.github.io/#/react-news",
   "dependencies": {
     "core-js": "^2.5.7",
     "gh-pages": "^2.0.1",
