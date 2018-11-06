@@ -3,7 +3,7 @@ import { HomePage, TechPage, PoliticsPage, SciPage, BusinessPage, SportsPage, No
 import { HashRouter, Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchNewsIfNeeded } from './actions'
-import './stylesheets/App.css';
+import './App.css';
 
 class App extends Component {
   componentDidMount(){
