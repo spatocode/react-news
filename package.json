@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Ekene Izukanne",
-  "homepage": "https://reactnews.herokuapp.com",
+  "homepage": "https://reactnews53.herokuapp.com",
   "dependencies": {
     "core-js": "^2.5.7",
     "prop-types": "^15.6.2",
@@ -20,7 +20,6 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "deploy": "git push heroku master",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
