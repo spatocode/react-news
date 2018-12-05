@@ -2,7 +2,8 @@
 
 # React News
 
-A simple news website using the implementation of redux async flow with react
+A simple news website using the implementation of redux async flow with react.
+[CHECK OUT THE WEBSITE](https://reactnews53.herokuapp.com)
 
 
 ## Teck Stack
