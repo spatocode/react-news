@@ -1,4 +1,3 @@
-
 import C from '../actions/constant'
 
 const initialState = {
@@ -7,12 +6,16 @@ const initialState = {
     items: []
 }
 
-export function navReducer(state = {fullNav: false}, action){
+export function nav(state = {fullNav: false}, action){
     switch(action.type){
         case C.ON_OVER:
-            return { fullNav: action.payload }
+            return Object.assign({}, state, {
+                fullNav: action.payload
+            })
         case C.ON_OUT:
-            return { fullNav: action.payload }
+            return Object.assign({}, state, {
+                fullNav: action.payload
+            })
         default:
             return state
     }
@@ -33,18 +36,18 @@ export function news(state = initialState, action) {
     switch(action.type){
         case C.REQUEST_NEWS:
             return Object.assign({}, state, {
-                isFetching: true,
+                isFetching: action.isFetching,
             })
         case C.RECEIVE_NEWS:
             return Object.assign({}, state, {
-                isFetching: false,
-                error: false,
+                isFetching: action.isFetching,
+                error: action.error,
                 items: action.news
             })
         case C.ERROR_REPORT: 
             return Object.assign({}, state, {
-                isFetching: false,
-                error: true
+                isFetching: action.isFetching,
+                error: action.error
             })
         default:
             return state
