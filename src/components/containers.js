@@ -11,7 +11,7 @@ import { onOver, onOut, selectNews } from '../actions'
 
 export const Menu = connect(
     state => ({
-        fullMenu: state.navReducer.fullNav ? {width: '130px'} : {width: '20px'}
+        fullMenu: state.nav.fullNav ? {width: '130px'} : {width: '20px'}
     }), 
     dispatch => ({
         show: () => { dispatch(onOver()) },

@@ -16,16 +16,21 @@ export const selectNews = (category) => ({
 })
 
 export const requestNews = () => ({
-    type: C.REQUEST_NEWS
+    type: C.REQUEST_NEWS,
+    isFetching: true
 })
 
 export const receiveNews = (json) => ({
     type: C.RECEIVE_NEWS,
+    isFetching: false,
+    error: false,
     news: json.articles
 })
 
 export const errorReport = () => ({
-    type: C.ERROR_REPORT
+    type: C.ERROR_REPORT,
+    isFetching: false,
+    error: true
 })
 
 function fetchNews(category){
