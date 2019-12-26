@@ -50,7 +50,7 @@ function shouldFetchNews(state){
     if(news.length === 0){
         return true
     }
-    else if(news.isFetching){
+    else if(state.isFetching){
         return false
     }
     else{
