@@ -20,7 +20,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^4.10.0"
+    "eslint": "^4.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
