@@ -47,15 +47,10 @@ function fetchNews(category){
 
 function shouldFetchNews(state){
     const news = state.news.items
-    if(news.length === 0){
-        return true
-    }
-    else if(state.isFetching){
+    if(state.isFetching || news.length > 0){
         return false
     }
-    else{
-        return true
-    }
+    return true
 }
 
 export function fetchNewsIfNeeded(category){
