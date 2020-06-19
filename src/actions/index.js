@@ -36,7 +36,12 @@ export const errorReport = () => ({
 function fetchNews(category){
     return dispatch => {
         dispatch(requestNews())
-        return fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=8fadfc68622547b88f834eb6e89f6324`)
+        return fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=8fadfc68622547b88f834eb6e89f6324`, {
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
             .then(response => response.json())
             .then(json => dispatch(receiveNews(json)))
             .catch(error => {
